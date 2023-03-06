@@ -1,5 +1,4 @@
 #include <iostream>
-using namespace std;
 
 int main(int argc, char **argv)
 {
@@ -11,7 +10,7 @@ int main(int argc, char **argv)
 	j = 1;
 	if (argc == 1)
 	{
-		cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
 		return (0);
 	}
 	while (j < argc)
@@ -22,12 +21,12 @@ int main(int argc, char **argv)
 				c = argv[j][i] - 32;
 			else
 				c = argv[j][i];
-			cout << c;
+			std::cout << c;
 			i++;
 		}
 		i = 0;
 		j++;
 	}
-	cout << '\n';
+	std::cout << '\n';
 	return 0;
 }
