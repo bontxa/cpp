@@ -2,5 +2,6 @@
 
 int main() {
     Harl    test;
-    test.complain("error");
+    test.complain("INFO");
+    test.complain("ERROR");
 }

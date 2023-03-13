@@ -1,5 +1,3 @@
-//#include "Weapon.hpp"
-//#include "HumanA.hpp"
 #include "HumanB.hpp"
 
 HumanB::HumanB(std::string  _name)
@@ -7,10 +5,7 @@ HumanB::HumanB(std::string  _name)
     name = _name;
 }
 
-HumanB::~HumanB()
-{
-    std::cout << "Class HumanB destroyed" << std::endl;
-}
+HumanB::~HumanB() {};
 
 void    HumanB::setWeapon(Weapon& _weapon)
 {

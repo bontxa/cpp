@@ -1,26 +1,21 @@
 #include "sed.hpp"
 
-int main() {
-    std::string filename;
-    std::string s1;
-    std::string s2;
+int main(int argc, char **argv) {
+    if (argc != 4) {
+        std::cout << "Wrong number of arguments" << std::endl;
+        return (1);
+    }
     std::string line;
     std::string pre;
     std::string post = "";
     std::ifstream readFromFile;
     std::ofstream writeToFile;
     size_t pos = 0;
-    std::cout << "Insert filename:" << std::endl;
-    getline(std::cin, filename);
-    readFromFile.open(filename.c_str());
+    readFromFile.open(argv[1]);
     if (readFromFile.is_open() == false) {
-        std::cout << "cannot open file " << filename << std::endl;
+        std::cout << "cannot open file " << argv[1] << std::endl;
         return (1);
     }
-    std::cout << "Insert string 1:" << std::endl;
-    getline(std::cin, s1);
-    std::cout << "Insert string 2:" << std::endl;
-    getline(std::cin, s2);
     writeToFile.open("read.replace");
     while (getline(readFromFile, line)) {
         while (pos < line.length()) {
@@ -29,8 +24,8 @@ int main() {
                 end++;
             }
             pre = line.substr(pos, end - pos);
-            if (pre == s1)
-                pre = s2;
+            if (pre == argv[2])
+                pre = argv[3];
             post += pre;
             post += ' ';
             pos = end + 1;

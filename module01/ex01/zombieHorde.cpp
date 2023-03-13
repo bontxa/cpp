@@ -6,9 +6,6 @@ Zombie*	zombieHorde(int N, std::string name)
 	int	i = 0;
 
 	while (i < N)
-	{
-		zombiArray[i].name_setter(name);
-		zombiArray[i++].announce();
-	}
+		zombiArray[i++].name_setter(name);
 	return zombiArray;
 }

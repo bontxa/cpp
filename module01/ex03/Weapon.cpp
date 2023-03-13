@@ -9,10 +9,7 @@ Weapon::Weapon(std::string str)
     type = str;
 }
 
-Weapon::~Weapon()
-{
-    std::cout << "Class Weapon destroyed" << std::endl;
-}
+Weapon::~Weapon() {};
 
 const std::string&	Weapon::getType()
 {

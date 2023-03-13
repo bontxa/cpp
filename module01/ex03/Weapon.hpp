@@ -1,8 +1,6 @@
 #ifndef WEAPON_H
 #define WEAPON_H
 #include <iostream>
-//#include "HumanA.hpp"
-//#include "HumanB.hpp"
 
 class Weapon
 {
